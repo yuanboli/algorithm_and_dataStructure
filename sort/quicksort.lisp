@@ -1,0 +1,6 @@
+(defun quicksort (lst)
+	(cond ((null lst) ())
+	      ((= (length lst) 1) lst)
+				(t (let ((l1 (remove-if-not #'(lambda (x) (< x (car lst))) (cdr lst)))
+				         (l2 (remove-if-not #'(lambda (x) (>= x (car lst))) (cdr lst))))
+				     (append (quicksort l1) (list (car lst)) (quicksort l2)))))) 
