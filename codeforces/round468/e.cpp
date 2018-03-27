@@ -19,6 +19,7 @@ int main(){
     }
 
     double result = 0;
+    // notice prob = \sum_{f} (# f)/(len) * (# work out | f) / (# all | f) = \sum_{f} (# work out | f) / len = (# work out) / len
     for(int i = 0; i < 26; i++){
         int ma = 0;
         for(int j = 1; j <= len-1; j++){
